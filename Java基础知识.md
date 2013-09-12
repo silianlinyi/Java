@@ -1,5 +1,7 @@
 # Java基础知识
 
+第一个程序Helloworld：
+
     Helloworld.java
     
     public class Helloworld {
@@ -7,6 +9,8 @@
     		System.out.println("Helloworld");
     	}
     }
+
+编译java程序（-verbose 输出有关编译器正在执行的操作的消息）：
     
 > javac -verbose Helloworld.java
     
@@ -41,3 +45,27 @@
     [正在加载ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_40\lib\ct.sym(META-INF/sym/rt.jar/java/io/OutputStream.class)]]
     [已写入RegularFileObject[Helloworld.class]]
     [共 146 毫秒]
+    
+最后，执行编译生成的字节码（class）文件：
+
+> java Helloworld
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
