@@ -65,6 +65,10 @@
 
 最好避免比较中使用浮点数。
 
+## 生成项目API文档
+
+Package Explorer -> 右击项目 -> Export -> Java -> Javadoc
+
 
 
 
