@@ -11,3 +11,49 @@ clone方法原型如下：
 
 clone方法在Object类中被定义为protected的，因此只有在其子类中进行重写才能真正发挥作用，Java语言规定，所有要进行“克隆”的对象
 所属的类必须实现java.lang.Cloneable接口，这是一种安全性保护。
+
+实现简单的克隆clone操作：
+
+> Person.java
+
+    public class Person implements Cloneable {
+    	private String name;
+    	private int age;
+    
+    	public Person(String name, int age) {
+    		this.name = name;
+    		this.age = age;
+    	}
+    
+    	public void setName(String name) {
+    		this.name = name;
+    	}
+    
+    	public void setAge(int age) {
+    		this.age = age;
+    	}
+    
+    	public void display() {
+    		System.out.println("Name: " + name + "\tAge: " + age);
+    	}
+    
+    	public Object clone() {
+    		Person p = null;
+    		try {
+    			p = (Person) super.clone();
+    		} catch (CloneNotSupportedException e) {
+    			e.printStackTrace();
+    		}
+    		return p;
+    	}
+    
+    }
+
+
+
+
+
+
+
+
+
