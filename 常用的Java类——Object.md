@@ -14,7 +14,7 @@ clone方法在Object类中被定义为protected的，因此只有在其子类中
 
 实现简单的克隆clone操作：
 
-> Person.java
+> 源文件：Person.java
 
     public class Person implements Cloneable {
     	private String name;
@@ -48,6 +48,35 @@ clone方法在Object类中被定义为protected的，因此只有在其子类中
     	}
     
     }
+
+> 源文件：TestClone.java
+
+    public class TestClone {
+    	public static void main(String[] args) {
+    		Person p1 = new Person("Tom", 18);
+    		Person p2 = (Person) p1.clone();
+    		System.out.println(p1 == p2);
+    		p2.setAge(34);
+    		p2.display();
+    		p1.display();
+    	}
+    }
+
+程序运行结果输出为：
+
+    false
+    Name: Tom	Age: 34
+    Name: Tom	Age: 18
+
+细心的读者可能会去查看java.lang.Cloneable接口的源代码，并惊奇地发现该接口中没有任何内容，其源代码如下：
+
+    package java.lang;
+    public interface Cloneable {
+    }
+
+这样的接口被称为空接口，实际上只是起到标记的作用————必须是该接口实现类的实例才能进行克隆操作，因此这样的接口也称
+“标记性接口”。需要小心的是，使用上述的clone方法进行对象拷贝可能出现“浅度拷贝”的问题，我们还是先看一个直观的例子，然后
+再作分析。
 
 
 
