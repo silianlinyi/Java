@@ -5,4 +5,9 @@
 问题的，因为并没有创建新对象；而自己编写代码先创建一个新对象，再将原始对象的属性值一一复制过来也比较繁琐，且存在后述的
 “浅度拷贝”问题；这种情况下，利用clone()方法来实现对象拷贝不失为一种明智的选择。
 
+clone方法原型如下：
 
+    protected native Object clone() throws CloneNotSupportedException;
+
+clone方法在Object类中被定义为protected的，因此只有在其子类中进行重写才能真正发挥作用，Java语言规定，所有要进行“克隆”的对象
+所属的类必须实现java.lang.Cloneable接口，这是一种安全性保护。
