@@ -21,3 +21,7 @@ Unicode编码字符序列，其对象创建之后，所保存的字符串内容�
 StringBuilder类是线程不安全的，即不保证其对象的同步性，在多线程环境中是不安全的。除了不保证同步性之外，StringBuilder类在
 性能上要比StringBuffer好一些，因此在单线程编程或者能够确定线程安全的情况下，建议尽量用StringBuilder；反之，则应使用
 StringBuffer。
+
+### StringTokenizer类
+
+java.util.StringTokenizer类的功能是将当前字符串按照默认或指定的分隔符（即分隔标记）分解为多个片段。
