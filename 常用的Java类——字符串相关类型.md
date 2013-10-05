@@ -7,6 +7,9 @@ String类用来表示字符串常量的，用它创建的每个对象都是字�
 
 ### StringBuffer类
 
+* 与String类区别：StringBuffer类对象保存可修改的Unicode编码字符序列；
+* 与StringBuilder类区别：StringBuilder类是线程安全的；
+
 在实际开发中，我们经常需要对字符串的内容进行修改，使用String类型不是不可以，但的确效率不高（因其对象一经创建内容不可改变，
 就只能不断地创建新对象并销毁旧的对象），这种情况下使用java.lang.StringBuffer类就比较适合了，该类表示的是内容可以修改的
 Unicode编码字符序列，其对象创建之后，所保存的字符串内容和长度均可以修改，实际上每个StringBuffer对象都拥有一个可变容量的
