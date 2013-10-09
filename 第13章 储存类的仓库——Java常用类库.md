@@ -21,3 +21,41 @@ getProperties()方法是获得当前虚拟机的环境属性。每一个属性�
     		}
     	}
     }
+
+### 13.4.2 Runtime类
+
+Runtime.getRuntime()获得正在运行的Runtime对象的引用。
+
+> Java进程与子进程交互RuntimeDemo.java
+
+    public class RuntimeDemo {
+    	public static void main(String[] args) {
+    		Runtime run = Runtime.getRuntime();
+    		try {
+    			run.exec("notepad.exe");
+    		} catch (Exception e) {
+    			e.printStackTrace();
+    		}
+    	}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
