@@ -19,3 +19,7 @@
 ### 5. 注释某一行代码
 
     Ctrl + /
+
+### 6. 在Eclipse查看API源代码时，通过Ctrl + 左键进入某个方法的Declaration后，想回退
+
+    Alt + Left/Right
