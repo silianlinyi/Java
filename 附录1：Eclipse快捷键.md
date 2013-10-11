@@ -7,3 +7,7 @@
 ### 2. 查看本地历史版本
 
     右击 > Local History
+
+### 3. 组织导入包
+
+    菜单 > Source > Organize Imports    快捷键(Ctrl + Shift + O)
