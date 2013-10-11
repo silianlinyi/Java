@@ -11,3 +11,7 @@
 ### 3. 组织导入包
 
     菜单 > Source > Organize Imports    快捷键(Ctrl + Shift + O)
+
+### 4. 删除一行
+
+    Ctrl + D
